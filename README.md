@@ -1,4 +1,4 @@
-# IMU-motion-tracking-device-
+# IMU-motion-tracking-device
 Standalone Multi-Node IMU Motion Tracking System for Clinical Rehabilitation
 # Standalone Multi-Node Wireless Motion Tracking Device
 ### IMU Calibration Validation System — Arduino Uno + STM32 WB55RG + BNO055
