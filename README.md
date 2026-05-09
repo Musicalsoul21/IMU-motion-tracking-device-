@@ -35,13 +35,13 @@ Arduino Uno (USB → Laptop)          STM32 WB55RG Node #1 (Battery)
 ┌─────────────────────┐             ┌──────────────────────────────┐
 │  Pin 9  → Servo 1   │             │  I2C  → BNO055 IMU #1        │
 │  Pin 10 → Servo 2   │             │  SPI  → MicroSD Card #1      │
-│  USB → Python Logger│             │  3.3V → AMS1117 → LiPo+TP4056│
+│  USB → Python Logger│             │  3.3V → STM32 → LiPo+TP4056│
 └─────────────────────┘             └──────────────────────────────┘
          │                          STM32 WB55RG Node #2 (Battery)
          │ Serial @ 115200 baud     ┌──────────────────────────────┐
          ▼                          │  I2C  → BNO055 IMU #2        │
    servo1_log.csv                   │  SPI  → MicroSD Card #2      │
-   servo2_log.csv                   │  3.3V → AMS1117 → LiPo+TP4056│
+   servo2_log.csv                   │  3.3V → STM32 → LiPo+TP4056│
    (Python captures)                └──────────────────────────────┘
                                               │
                                     S1001.CSV / S2001.CSV
@@ -66,13 +66,12 @@ Arduino Uno (USB → Laptop)          STM32 WB55RG Node #1 (Battery)
 | 6 | TowerPro SG92R Micro Servo | 2 | Swing + Twist axes |
 | 7 | 3.7V 500 mAh Li-Po Battery | 2 | One per node |
 | 8 | TP4056 USB-C Charging Module (with DW01A) | 2 | Protection IC required |
-| 9 | AMS1117-3.3V Voltage Regulator | 2 | TO-223 or SOT-223 package |
-| 10 | 100 µF Electrolytic Capacitor | 2 | AMS1117 output decoupling |
-| 11 | 4.7 kΩ Resistor | 4 | I2C pull-ups (2 per node) |
-| 12 | FR4 Protoboard | 2 | For PDB assembly |
-| 13 | ST-Link V2 Debugger | 1 | STM32 firmware flashing |
-| 14 | USB-A to USB-B cable | 1 | Arduino → Laptop |
-| 15 | Jumper wires (AWG 24/26) | — | Power + signal wiring |
+| 9 | 100 µF Electrolytic Capacitor | 2 | AMS1117 output decoupling |
+| 10 | 4.7 kΩ Resistor | 4 | I2C pull-ups (2 per node) |
+| 11 | FR4 Protoboard | 2 | For PDB assembly |
+| 12 | ST-Link V2 Debugger | 1 | STM32 firmware flashing |
+| 13 | USB-A to USB-B cable | 1 | Arduino → Laptop |
+| 14 | Jumper wires (AWG 24/26) | — | Power + signal wiring |
 
 ---
 
